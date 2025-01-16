@@ -52,3 +52,74 @@ const Landing = () => {
 };
 
 export default Landing;
+
+
+
+import React from "react";
+import { BarChart } from "@mui/x-charts/BarChart";
+
+const StudentDash = () => {
+  return (
+    <div className="min-h-screen bg-black text-white">
+      {/* Navigation Bar */}
+      <nav className="bg-green-500 text-white p-4 shadow-md">
+        <div className="container mx-auto flex justify-between items-center">
+          <h1 className="text-2xl font-bold">Student Dashboard</h1>
+          <ul className="flex space-x-4 text-lg font-medium">
+            <li><a href="#" className="hover:text-black transition-colors">Home</a></li>
+            <li><a href="#" className="hover:text-black transition-colors">Profile</a></li>
+            <li><a href="#" className="hover:text-black transition-colors">Courses</a></li>
+            <li><a href="#" className="hover:text-black transition-colors">Settings</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      {/* Main Content */}
+      <div className="container mx-auto p-6">
+        {/* 2x2 Grid Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div className="bg-green-500 p-6 rounded-lg shadow-md hover:bg-green-600 transition-colors">
+            <h2 className="text-xl font-semibold mb-4">Performance Chart</h2>
+            {/* Bar Chart */}
+            <BarChart
+              xAxis={[{ scaleType: "band", data: ["Group A", "Group B", "Group C"] }]}
+              series={[
+                { data: [4, 3, 5] },
+                { data: [1, 6, 3] },
+                { data: [2, 5, 6] },
+              ]}
+              width={400}
+              height={250}
+            />
+          </div>
+          <div className="bg-green-500 p-6 rounded-lg shadow-md hover:bg-green-600 transition-colors">
+            <h2 className="text-xl font-semibold mb-4">Section 2</h2>
+            <p>Content for section 2 goes here. Customize this as needed.</p>
+          </div>
+          <div className="bg-green-500 p-6 rounded-lg shadow-md hover:bg-green-600 transition-colors">
+            <h2 className="text-xl font-semibold mb-4">Section 3</h2>
+            <p>Content for section 3 goes here. Customize this as needed.</p>
+          </div>
+          <div className="bg-green-500 p-6 rounded-lg shadow-md hover:bg-green-600 transition-colors">
+            <h2 className="text-xl font-semibold mb-4">Section 4</h2>
+            <p>Content for section 4 goes here. Customize this as needed.</p>
+          </div>
+        </div>
+
+        {/* Flex Section */}
+        <div className="flex flex-col md:flex-row gap-6">
+          <div className="bg-green-500 p-6 rounded-lg shadow-md flex-1 hover:bg-green-600 transition-colors">
+            <h2 className="text-xl font-semibold mb-4">Flex Box 1</h2>
+            <p>Content for the first flex box goes here.</p>
+          </div>
+          <div className="bg-green-500 p-6 rounded-lg shadow-md flex-1 hover:bg-green-600 transition-colors">
+            <h2 className="text-xl font-semibold mb-4">Flex Box 2</h2>
+            <p>Content for the second flex box goes here.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default StudentDash;

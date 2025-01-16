@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaGraduationCap, FaChartLine, FaRobot, FaUsers } from 'react-icons/fa'
-
+import NavBar from './NavBar'
 const About = () => {
   const features = [
     {
@@ -27,6 +27,8 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-black text-white">
+    <NavBar />
+    
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">

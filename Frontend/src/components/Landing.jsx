@@ -1,14 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import GirlImg from "../assets/GirlImg.png"
 // import Boy from "../assets/Boy.png"
 // import Cutie from "../assets/Cutie.png"
+import NavBar from "./NavBar"
 
 const Landing = () => {
+    const navigate = useNavigate();
     return (
         <div className="bg-black text-white">
             {/* Navigation - Added mobile menu */}
-            
+            <NavBar />
 
             {/* Hero Section - Improved responsiveness */}
             <section className="min-h-screen flex items-center pt-20 lg:pt-0">
@@ -23,7 +25,7 @@ const Landing = () => {
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                                <button className="bg-green-500 px-6 sm:px-8 py-3 rounded-full hover:bg-green-600 transition-colors text-sm sm:text-base w-full sm:w-auto">
+                                <button onClick={() => navigate('/login')} className="bg-green-500 px-6 sm:px-8 py-3 rounded-full hover:bg-green-600 transition-colors text-sm sm:text-base w-full sm:w-auto">
                                     Get Started
                                 </button>
                                 <button className="border border-green-500 text-green-500 px-6 sm:px-8 py-3 rounded-full hover:bg-green-500 hover:text-white transition-colors text-sm sm:text-base w-full sm:w-auto">
@@ -46,6 +48,8 @@ const Landing = () => {
                     </div>
                 </div>
             </section>
+
+            
 
             {/* Features Section - Improved grid responsiveness */}
             <section className="py-16 sm:py-20">

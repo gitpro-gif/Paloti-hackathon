@@ -1,8 +1,10 @@
 import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline'
+import NavBar from './NavBar'
 
 export default function Contact() {
   return (
     <div className="bg-black min-h-screen">
+      <NavBar />
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-16">

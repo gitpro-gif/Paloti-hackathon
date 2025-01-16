@@ -1,14 +1,39 @@
 import React, { useState } from 'react'
-
+import { useNavigate } from 'react-router-dom';
 const Login = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: '',
     password: ''
   })
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    // Handle login logic here
+    e.preventDefault();
+    const Apassword = "123456"; // Convert to string since password input will be string
+    const Amail = "Admin@gmail.com";
+
+    const Spassword = "123456";
+    const Semail = "Student@gmail.com";
+
+    
+    const { email, password } = formData;
+
+   
+    if (Apassword === password && Amail === email) {
+      navigate('/admin');
+      console.log('Logged in successfully:', email);
+      alert('Logged in successfully');
+    } 
+    else if (Spassword === password && Semail === email){
+      navigate('/student');
+      console.log('Logged in successfully:', email);
+      alert('Logged in successfully');
+    }
+    else {
+      
+      console.log('Invalid email or password');
+      
+    }
   }
 
   return (
