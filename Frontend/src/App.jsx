@@ -9,6 +9,9 @@ import About from './components/About'
 import Contact from './components/Contact'
 import AdminDash from './DashBoard/AdminDash'
 import StudentDash from './DashBoard/StudentDash'
+import PersonalizedAi from './AI/PersonalizedAi'
+import AskGuruji from './AI/AskGuruji'
+import AiRecommendation from './AI/AiRecommendation'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -25,6 +28,9 @@ function App() {
           <Route path='/contact' element = {<Contact />} />
           <Route path='/admin' element = {<AdminDash />} />
           <Route path='/student' element = {<StudentDash />} />
+          <Route path='/personalized-ai' element = {<PersonalizedAi />} />
+          <Route path='/ask-guruji' element = {<AskGuruji />} />
+          <Route path='/ai-recommendation' element = {<AiRecommendation />} />
         </Routes>
       </Router>
     </>

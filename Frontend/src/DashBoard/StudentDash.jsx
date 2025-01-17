@@ -7,18 +7,18 @@ import Scatter from './Scatter';
 import ZoomLineChart from './ZoomLineChart';
 import ZoomBarChart from './ZoomBarChart';
 import { IoIosArrowBack } from "react-icons/io";
-
+import { Link } from 'react-router-dom';
+import AiRecommendation from '../AI/AiRecommendation';
 const StudentDash = () => {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   
   return (
     <div className="min-h-screen bg-black text-white p-4 md:p-6">
-    <div>
       <nav className="bg-gray-900 p-4 mb-6 rounded-lg">
-      <div onClick={() => navigate('/')} className='text-2xl font-bold text-white'>
-        <IoIosArrowBack />
-      </div>
+        <div onClick={() => navigate('/')} className='text-2xl font-bold text-white'>
+          <IoIosArrowBack />
+        </div>
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="text-2xl font-bold">AI Learning Assistant</div>
           
@@ -47,19 +47,20 @@ const StudentDash = () => {
               <span>Skill Analysis</span>
             </button>
             
-            <button className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg flex items-center gap-2 w-full lg:w-auto justify-center">
+            <button onClick={() => navigate('/ai-recommendation')} className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg flex items-center gap-2 w-full lg:w-auto justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z" />
               </svg>
               <span>AI Recommendations</span>
             </button>
-            
-            <button className="px-4 py-2 bg-orange-600 hover:bg-orange-700 rounded-lg flex items-center gap-2 w-full lg:w-auto justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
-              </svg>
-              <span>Ask Guruji</span>
-            </button>
+          </div>
+
+          <Link to="/ask-guruji" className="px-4 py-2 bg-orange-600 hover:bg-orange-700 rounded-lg flex items-center gap-2 w-full lg:w-auto justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+            </svg>
+            <span>Ask Guruji</span>
+          </Link>
             
             <button className="px-4 py-2 bg-yellow-600 hover:bg-yellow-700 rounded-lg flex items-center gap-2 w-full lg:w-auto justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -68,9 +69,9 @@ const StudentDash = () => {
               <span>Easy Learning</span>
             </button>
           </div>
-        </div>
+
       </nav>
-    </div>
+      
       <div className="container mx-auto grid lg:grid-cols-2 gap-6">
         {/* 2x2 Grid Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
