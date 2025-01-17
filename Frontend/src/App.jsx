@@ -12,6 +12,7 @@ import StudentDash from './DashBoard/StudentDash'
 import PersonalizedAi from './AI/PersonalizedAi'
 import AskGuruji from './AI/AskGuruji'
 import AiRecommendation from './AI/AiRecommendation'
+import EasyLearn from './AI/EasyLearn'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -31,6 +32,7 @@ function App() {
           <Route path='/personalized-ai' element = {<PersonalizedAi />} />
           <Route path='/ask-guruji' element = {<AskGuruji />} />
           <Route path='/ai-recommendation' element = {<AiRecommendation />} />
+          <Route path='/easy-learning' element = {<EasyLearn />} />
         </Routes>
       </Router>
     </>

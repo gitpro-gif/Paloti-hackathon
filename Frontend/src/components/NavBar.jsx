@@ -56,17 +56,17 @@ const NavBar = () => {
               <Link to="/features" className="block px-3 py-2 rounded-md text-base font-medium hover:text-green-500 transition-colors">
                 Features
               </Link>
-              <Link to="#" className="block px-3 py-2 rounded-md text-base font-medium hover:text-green-500 transition-colors">
+              <Link to="/about" className="block px-3 py-2 rounded-md text-base font-medium hover:text-green-500 transition-colors">
                 About
               </Link>
-              <Link to="#" className="block px-3 py-2 rounded-md text-base font-medium hover:text-green-500 transition-colors">
+              <Link to="/contact" className="block px-3 py-2 rounded-md text-base font-medium hover:text-green-500 transition-colors">
                 Contact
               </Link>
               <div className="flex flex-col gap-2 pt-2">
-                <button className="w-full bg-green-500 px-4 py-2 rounded-full hover:bg-green-600 transition-colors text-sm">
+                <button onClick={() => navigate('/login')} className="w-full bg-green-500 px-4 py-2 rounded-full hover:bg-green-600 transition-colors text-sm">
                   Login
                 </button>
-                <button className="w-full bg-green-500 px-4 py-2 rounded-full hover:bg-green-600 transition-colors text-sm">
+                <button onClick={() => navigate('/signup')} className="w-full bg-green-500 px-4 py-2 rounded-full hover:bg-green-600 transition-colors text-sm">
                   Sign Up
                 </button>
               </div>

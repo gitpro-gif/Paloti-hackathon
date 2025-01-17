@@ -9,31 +9,8 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const Apassword = "123456"; // Convert to string since password input will be string
-    const Amail = "Admin@gmail.com";
-
-    const Spassword = "123456";
-    const Semail = "Student@gmail.com";
-
-    
-    const { email, password } = formData;
-
-   
-    if (Apassword === password && Amail === email) {
-      navigate('/admin');
-      console.log('Logged in successfully:', email);
-      alert('Logged in successfully');
-    } 
-    else if (Spassword === password && Semail === email){
-      navigate('/student');
-      console.log('Logged in successfully:', email);
-      alert('Logged in successfully');
-    }
-    else {
-      
-      console.log('Invalid email or password');
-      
-    }
+    alert('Logged in successfully');
+    navigate('/student');
   }
 
   return (
@@ -61,7 +38,6 @@ const Login = () => {
                 name="email"
                 type="email"
                 autoComplete="email"
-                required
                 className="appearance-none relative block w-full px-3 py-3 border border-gray-700 placeholder-gray-500 text-white rounded-lg bg-gray-800 focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
                 placeholder="Email address"
                 value={formData.email}
@@ -77,7 +53,6 @@ const Login = () => {
                 name="password"
                 type="password"
                 autoComplete="current-password"
-                required
                 className="appearance-none relative block w-full px-3 py-3 border border-gray-700 placeholder-gray-500 text-white rounded-lg bg-gray-800 focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
                 placeholder="Password"
                 value={formData.password}
